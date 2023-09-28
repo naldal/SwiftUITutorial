@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA2B11912AC4791400027651 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2B11902AC4791400027651 /* DetailView.swift */; };
+		DA3DE64D2AC55D70003FD34B /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3DE64C2AC55D70003FD34B /* DetailEditView.swift */; };
+		DA69ACD02AC53D4B0003C650 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69ACCF2AC53D4B0003C650 /* ThemeView.swift */; };
+		DA69ACD32AC53E450003C650 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69ACD22AC53E450003C650 /* ThemePicker.swift */; };
 		DA9EE7512A99E925003CD03D /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9EE7502A99E925003CD03D /* ScrumsView.swift */; };
 		DAFCB5652A8B56CD00838510 /* SrcrumdingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCB5642A8B56CD00838510 /* SrcrumdingerApp.swift */; };
 		DAFCB5672A8B56CD00838510 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFCB5662A8B56CD00838510 /* MeetingView.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		DA2B11902AC4791400027651 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DA3DE64C2AC55D70003FD34B /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		DA69ACCF2AC53D4B0003C650 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		DA69ACD22AC53E450003C650 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		DA9EE7502A99E925003CD03D /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		DAFCB5612A8B56CD00838510 /* Srcrumdinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Srcrumdinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFCB5642A8B56CD00838510 /* SrcrumdingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SrcrumdingerApp.swift; sourceTree = "<group>"; };
@@ -48,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				DA2B118E2AC3E78400027651 /* Sub */,
-				DA9EE7502A99E925003CD03D /* ScrumsView.swift */,
-				DA2B11902AC4791400027651 /* DetailView.swift */,
 			);
 			path = Scrums;
 			sourceTree = "<group>";
@@ -78,12 +82,17 @@
 			path = Sub;
 			sourceTree = "<group>";
 		};
-		DA2B118F2AC3E7D300027651 /* Etc */ = {
+		DA3DE64B2AC55D55003FD34B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DAFCB5662A8B56CD00838510 /* MeetingView.swift */,
+				DA9EE7502A99E925003CD03D /* ScrumsView.swift */,
+				DA2B11902AC4791400027651 /* DetailView.swift */,
+				DA69ACCF2AC53D4B0003C650 /* ThemeView.swift */,
+				DA69ACD22AC53E450003C650 /* ThemePicker.swift */,
+				DA3DE64C2AC55D70003FD34B /* DetailEditView.swift */,
 			);
-			path = Etc;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DAFCB5582A8B56CD00838510 = {
@@ -105,7 +114,7 @@
 		DAFCB5632A8B56CD00838510 /* Srcrumdinger */ = {
 			isa = PBXGroup;
 			children = (
-				DA2B118F2AC3E7D300027651 /* Etc */,
+				DA3DE64B2AC55D55003FD34B /* Views */,
 				DA2B118D2AC3E73800027651 /* Style */,
 				DA2B118B2AC3E71B00027651 /* Scrums */,
 				DAFCB5642A8B56CD00838510 /* SrcrumdingerApp.swift */,
@@ -206,10 +215,13 @@
 				DAFCB5762A8B626D00838510 /* DailyScrum.swift in Sources */,
 				DA2B11912AC4791400027651 /* DetailView.swift in Sources */,
 				DAFCB57A2A8B762E00838510 /* TrailingIconLabelStyle.swift in Sources */,
+				DA69ACD32AC53E450003C650 /* ThemePicker.swift in Sources */,
 				DAFCB5742A8B61B100838510 /* Theme.swift in Sources */,
 				DA9EE7512A99E925003CD03D /* ScrumsView.swift in Sources */,
 				DAFCB5672A8B56CD00838510 /* MeetingView.swift in Sources */,
 				DAFCB5652A8B56CD00838510 /* SrcrumdingerApp.swift in Sources */,
+				DA3DE64D2AC55D70003FD34B /* DetailEditView.swift in Sources */,
+				DA69ACD02AC53D4B0003C650 /* ThemeView.swift in Sources */,
 				DAFCB5782A8B6CA800838510 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

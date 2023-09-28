@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DetailView: View {
+
+  @State private var isPresentingEditView = false
   
   let scrum: DailyScrum
   
@@ -27,7 +29,7 @@ struct DetailView: View {
         HStack {
           Label("Theme", systemImage: "paintpalette")
           Spacer()
-          Text(scrum.theme.rawValue)
+          Text(scrum.theme.name)
             .padding(4)
             .foregroundStyle(scrum.theme.accentColor)
             .background(scrum.theme.mainColor)
@@ -38,7 +40,7 @@ struct DetailView: View {
       })
       Section(content: {
         ForEach(scrum.attendees) { attendee in
-//          Label(attendee.name, systemImage: "person")
+          Label(attendee.name, systemImage: "person")
           Label(
             title: {
               Text(attendee.name)
@@ -53,6 +55,29 @@ struct DetailView: View {
       })
     }
     .navigationTitle(scrum.title)
+    .toolbar {
+      Button("Edit") {
+        isPresentingEditView = true
+      }
+    }
+    .sheet(isPresented: $isPresentingEditView, content: {
+      NavigationStack {
+        DetailEditView()
+          .navigationTitle(scrum.title)
+          .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+              Button("Cancel") {
+                isPresentingEditView = false
+              }
+            }
+            ToolbarItem(placement: .confirmationAction) {
+              Button("Done") {
+                isPresentingEditView = false
+              }
+            }
+          }
+      }
+    })
   }
 }
 
