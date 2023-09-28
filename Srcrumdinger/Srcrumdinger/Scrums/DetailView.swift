@@ -38,7 +38,15 @@ struct DetailView: View {
       })
       Section(content: {
         ForEach(scrum.attendees) { attendee in
-          Label(attendee.name, systemImage: "person")
+//          Label(attendee.name, systemImage: "person")
+          Label(
+            title: {
+              Text(attendee.name)
+            },
+            icon: {
+              Image(systemName: "person").foregroundStyle(.red)
+            }
+          )
         }
       }, header: {
         Text("Attendees")
@@ -48,10 +56,9 @@ struct DetailView: View {
   }
 }
 
-struct DetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    NavigationStack {
-      DetailView(scrum: DailyScrum.sampleData[0])
-    }
+#Preview("Hello world!") {
+  NavigationStack {
+    DetailView(scrum: DailyScrum.sampleData[0])
   }
 }
+
