@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailEditView: View {
   
   @Binding var scrum: DailyScrum
+  
   @State private var newAttendeeName = ""
   
   var body: some View {
@@ -46,12 +47,12 @@ struct DetailEditView: View {
           }, label: {
             Image(systemName: "plus.circle.fill")
           })
+          .disabled(newAttendeeName.isEmpty)
         }
-        .disabled(newAttendeeName.isEmpty)
+
       }, header: {
         Text("Attendees")
       })
-      
     }
   }
 }

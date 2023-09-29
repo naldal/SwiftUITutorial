@@ -44,7 +44,7 @@ extension DailyScrum {
   }
   
   static var emptyScrum: DailyScrum {
-    DailyScrum(title: "", attendees: ["aaa", "bbb", "Ccc"], lengthInMinutes: 5, theme: .sky)
+    DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
   }
 }
 
